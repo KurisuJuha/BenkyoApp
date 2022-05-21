@@ -43,25 +43,17 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+      body: Column(children: [
+        Text("初めてのテキスト"),
+        Text("2番目のテキスト"),
+        TextButton(
+            onPressed: () => {print("ボタンが押されたよ")},
+            child: Text("更新")
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+        FloatingActionButton(onPressed: () => {print("押したね？")},
+        child: Icon(Icons.timer),
+        )
+      ]),
     );
   }
 }
